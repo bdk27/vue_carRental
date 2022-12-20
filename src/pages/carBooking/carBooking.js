@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
-import App from './App.vue'
+import carBooking from './CarBooking.vue'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import "bootstrap"
 
-createApp(App).mount('#app')
+createApp(carBooking).mount('#carBooking')
