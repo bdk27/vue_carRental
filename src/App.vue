@@ -1,14 +1,17 @@
 <template>
   <CARentNav></CARentNav>
-  <a href="/carBooking.html">前往租車</a>
+  <CARentHome></CARentHome>
 </template>
 
 <script>
   import CARentNav from './components/CARentNav'
+  import CARentHome from './components/CARentHome'
+  import 'animate.css';
   export default {
     name: 'App',
     components: {
       CARentNav,
+      CARentHome,
     }
 
   }

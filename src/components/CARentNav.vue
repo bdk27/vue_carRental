@@ -39,6 +39,7 @@
 
 <style lang="scss" scoped>  
     $blue: #003060;
+    $yellow: #ffc107;
 
     .navbar {
         background: $blue;
@@ -56,7 +57,20 @@
                 font-size: 1.6rem;
                 color: #f0f0f0;
                 margin: 0 2rem;
+                &:hover {
+                    color: $yellow;
+                }
             }
         }
     } 
+
+    @media(max-width: 992px) {
+        .navbar {
+            .container-fluid {
+                .nav-link {
+                    padding-bottom: 1rem;
+                }
+            }
+        } 
+    }
 </style>
