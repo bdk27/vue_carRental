@@ -1,0 +1,62 @@
+<template>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <div class=" d-flex flex-row align-items-center justify-content-between">
+                <div class="navbar-brand p-3 text-light"><span class="text-warning">CAR</span>ent</div>
+                <button class="navbar-toggler text-bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav py-2">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">首頁/Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">介紹/Introduce</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">服務/Serve</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">活動/Activity</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">關於我們/About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</template>
+
+<script>
+    export default {
+        name: 'CARentNav'
+    }
+</script>
+
+<style lang="scss" scoped>  
+    $blue: #003060;
+
+    .navbar {
+        background: $blue;
+        .container-fluid {
+            flex-direction: column;
+            .navbar-brand {
+                font-family: 'Poppins', sans-serif;
+                font-weight: bold;
+                font-size: 4rem;
+                span {
+                    font-family: 'Poppins', sans-serif;
+                }
+            }
+            .nav-link {
+                font-size: 1.6rem;
+                color: #f0f0f0;
+                margin: 0 2rem;
+            }
+        }
+    } 
+</style>
