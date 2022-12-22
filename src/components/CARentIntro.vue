@@ -10,8 +10,8 @@
                 <div class="col-12 p-5">
                     <div class="right-items">
                         <h3>與我們租車，讓您擁有最佳體驗！</h3>
-                        <p>CARent 秉持提供顧客安全舒適的車輛！全台各縣市均有分店，方便、快速滿足您的需求！全車系均為全新款式！定期保養，期滿汰舊更換新車！</p>
-                        <p>服務內容：轎車出租 / 貨車出租 / 休旅車出租 / 九人座出租 / 商務接送 / 機場接送 / 企業租車 / 旅遊包車 / 結婚禮車</p>
+                        <p><strong>CARent</strong> 秉持提供顧客安全舒適的車輛！全台各縣市均有分店，方便、快速滿足您的需求！全車系均為全新款式！定期保養，期滿汰舊更換新車！</p>
+                        <p><strong>服務內容</strong>：轎車出租 / 貨車出租 / 休旅車出租 / 九人座出租 / 商務接送 / 機場接送 / 企業租車 / 旅遊包車 / 結婚禮車</p>
                         <div class="items-icons d-flex align-items-start justify-content-evenly mt-5">
                             <div class="items-icons-content">
                                 <font-awesome-icon icon="fa-solid fa-map-location-dot" class="icon" />
@@ -83,6 +83,7 @@
         }
         small {
             text-align: center;
+            letter-spacing: 1px;
         }
     }
     @media(max-width: 576px) {
@@ -92,6 +93,11 @@
         }
         p {
             font-size: 1.6rem;
+        }
+        .items-icons-content {
+            h5 {
+                font-size: 1.4rem;
+            }
         }
     }
 </style>

@@ -2,12 +2,14 @@
   <CARentNav></CARentNav>
   <CARentHome></CARentHome>
   <CARentIntro></CARentIntro>
+  <CARentBanner></CARentBanner>
 </template>
 
 <script>
   import CARentNav from './components/CARentNav';
   import CARentHome from './components/CARentHome';
   import CARentIntro from './components/CARentIntro';
+  import CARentBanner from './components/CARentBanner';
   import 'animate.css';
 
   export default {
@@ -16,6 +18,7 @@
       CARentNav,
       CARentHome,
       CARentIntro,
+      CARentBanner,
     }
 
   }
