@@ -17,10 +17,10 @@
                         <a class="nav-link" href="#">介紹/Introduce</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">服務/Serve</a>
+                        <a class="nav-link" href="#">服務特色/Serve</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">活動/Activity</a>
+                        <a class="nav-link" href="#">活動內容/Activity</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">關於我們/About Us</a>
