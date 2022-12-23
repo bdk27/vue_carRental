@@ -3,6 +3,7 @@
   <CARentHome></CARentHome>
   <CARentIntro></CARentIntro>
   <CARentBanner></CARentBanner>
+  <CARentServe></CARentServe>
 </template>
 
 <script>
@@ -10,6 +11,7 @@
   import CARentHome from './components/CARentHome';
   import CARentIntro from './components/CARentIntro';
   import CARentBanner from './components/CARentBanner';
+  import CARentServe from './components/CARentServe';
   import 'animate.css';
 
   export default {
@@ -19,6 +21,7 @@
       CARentHome,
       CARentIntro,
       CARentBanner,
+      CARentServe,
     }
 
   }

@@ -1,17 +1,18 @@
 <template>
-    <div class="hero d-flex align-items-center justify-content-start flex-column animate__animated animate__fadeIn">
+    <div class="hero d-flex align-items-center justify-content-start flex-column animate__animated animate__fadeIn animate__slow">
         <h1 class="pt-5 animate__animated animate__fadeInLeft"><span class="text-warning">CARent</span> 優質租車服務</h1>
         <h2 class="animate__animated animate__fadeInRight">多樣車種隨您選擇</h2>
-        <div class="hero-btn d-flex align-items-center justify-content-center">
+        <div class="hero-btn d-flex align-items-center justify-content-center" id="hero-btn">
             <h3>即刻點選，獲得更多優惠</h3>
             <a href="/carBooking.html" class="animate__animated animate__pulse animate__infinite">立即租車</a>
-        </div>   
-    </div>
+        </div>
+    </div> 
+
 </template>
 
 <script>
     export default {
-        name: 'CARentHome'
+        name: 'CARentHome',
     }
 </script>
 
@@ -26,11 +27,13 @@
         background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .3)), url('../assets/img/banner/car2-5.png');
         background-position: center;
         background-repeat: no-repeat;
+        margin-bottom: 5rem;
         h1 {
             font-size: 5rem;
             font-weight: bold;
             letter-spacing: .2rem;
             color: $blue;
+            overflow-y: hidden;
             span {
                 font-family: 'Poppins', sans-serif;
                 letter-spacing: 0;
