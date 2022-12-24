@@ -6,6 +6,7 @@
   <CARentServe></CARentServe>
   <CARentNews></CARentNews>
   <CARentFooter></CARentFooter>
+  <DotLink></DotLink>
 </template>
 
 <script>
@@ -16,6 +17,7 @@
   import CARentServe from './components/CARentServe';
   import CARentNews from './components/CARentNews';
   import CARentFooter from './components/CARentFooter';
+  import DotLink from './components/DotLink';
   import 'animate.css';
 
   export default {
@@ -27,7 +29,8 @@
       CARentBanner,
       CARentServe,
       CARentNews,
-      CARentFooter
+      CARentFooter,
+      DotLink
     }
 
   }
