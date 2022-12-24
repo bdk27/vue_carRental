@@ -1,10 +1,10 @@
 <template>
-    <section>
+    <section id="introduce">
         <div class="container">
             <div class="row row-cols-sm-1 row-cols-md-1 row-cols-lg-2 g-5 align-items-center">
                 <div class="col-12">
                     <div class="items">
-                        <img src="../assets/img/banner/intro-img.png" class="w-100">
+                        <img src="../assets/img/banner/intro-img.png" class="w-100 animatImg">
                     </div>
                 </div>
                 <div class="col-12">

@@ -11,19 +11,19 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav py-2">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">首頁/Home</a>
+                        <a class="nav-link active" aria-current="page" href="#home">首頁/Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">介紹/Introduce</a>
+                        <a class="nav-link" href="#introduce">介紹/Introduce</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">服務特色/Serve</a>
+                        <a class="nav-link" href="#serve">服務特色/Serve</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">最新消息/News</a>
+                        <a class="nav-link" href="#news">最新消息/News</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">關於我們/About Us</a>
+                        <a class="nav-link" href="#aboutus">關於我們/About Us</a>
                     </li>
                 </ul>
             </div>

@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section id="news">
         <div class="container mb-3">
             <h3>最新消息/News</h3>
             <div class="row row-cols-sm-1 row-cols-md-2 g-3">

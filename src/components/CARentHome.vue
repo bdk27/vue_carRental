@@ -1,5 +1,5 @@
 <template>
-    <div class="hero d-flex align-items-center justify-content-start flex-column animate__animated animate__fadeIn animate__slow">
+    <div class="hero d-flex align-items-center justify-content-start flex-column animate__animated animate__fadeIn animate__slow" id="home">
         <h1 class="pt-5 animate__animated animate__fadeInLeft"><span class="text-warning">CARent</span> 優質租車服務</h1>
         <h2 class="animate__animated animate__fadeInRight">多樣車種隨您選擇</h2>
         <div class="hero-btn d-flex align-items-center justify-content-center" id="hero-btn">
