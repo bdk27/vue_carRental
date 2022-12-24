@@ -4,6 +4,7 @@
   <CARentIntro></CARentIntro>
   <CARentBanner></CARentBanner>
   <CARentServe></CARentServe>
+  <CARentNews></CARentNews>
 </template>
 
 <script>
@@ -12,6 +13,7 @@
   import CARentIntro from './components/CARentIntro';
   import CARentBanner from './components/CARentBanner';
   import CARentServe from './components/CARentServe';
+  import CARentNews from './components/CARentNews';
   import 'animate.css';
 
   export default {
@@ -22,6 +24,7 @@
       CARentIntro,
       CARentBanner,
       CARentServe,
+      CARentNews,
     }
 
   }
@@ -36,12 +39,16 @@
       margin: 0;
       box-sizing: border-box;
       font-family: 'Noto Sans TC', sans-serif;
+      overflow-x: hidden;
     }
     html {
       font-size: 62.5%;
     }
     section {
       padding: 5rem 0;
+    }
+    h1, h2, h3, h4, h5, p {
+      overflow-y: hidden;
     }
 
 </style>

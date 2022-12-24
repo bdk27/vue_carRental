@@ -1,7 +1,7 @@
 <template>
     <section>
         <div class="container">
-            <h3>服務特色</h3>
+            <h3>服務特色/Serve</h3>
             <div class="row row-cols-sm-1 row-cols-md-2 g-5">
                 <div class="col-12">
                     <div class="card shadow">
@@ -83,7 +83,6 @@
             }
             .card-link {
                 font-size: 1.6rem;
-                
             }
         }  
     }

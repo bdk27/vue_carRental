@@ -20,7 +20,7 @@
                         <a class="nav-link" href="#">服務特色/Serve</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">活動內容/Activity</a>
+                        <a class="nav-link" href="#">最新消息/News</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">關於我們/About Us</a>
@@ -54,7 +54,7 @@
                 }
             }
             .nav-link {
-                font-size: 1.6rem;
+                font-size: 1.8rem;
                 color: #f0f0f0;
                 margin: 0 2rem;
                 &:hover {
