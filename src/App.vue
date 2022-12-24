@@ -5,6 +5,7 @@
   <CARentBanner></CARentBanner>
   <CARentServe></CARentServe>
   <CARentNews></CARentNews>
+  <CARentFooter></CARentFooter>
 </template>
 
 <script>
@@ -14,6 +15,7 @@
   import CARentBanner from './components/CARentBanner';
   import CARentServe from './components/CARentServe';
   import CARentNews from './components/CARentNews';
+  import CARentFooter from './components/CARentFooter';
   import 'animate.css';
 
   export default {
@@ -25,6 +27,7 @@
       CARentBanner,
       CARentServe,
       CARentNews,
+      CARentFooter
     }
 
   }
