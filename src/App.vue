@@ -32,7 +32,6 @@
       CARentFooter,
       DotLink
     }
-
   }
 </script>
 

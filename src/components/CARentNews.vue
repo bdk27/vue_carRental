@@ -1,8 +1,8 @@
 <template>
     <section id="news">
-        <div class="container mb-3">
+        <div class="container">
             <h3>最新消息/News</h3>
-            <div class="row row-cols-sm-1 row-cols-md-2 g-3">
+            <div class="row row-cols-sm-1 row-cols-md-2 g-3 mb-3">
                 <div class="col-12">
                     <div class="items">
                         <img src="../assets/img/news/pexels-jagmeet-singh-1134857.jpg" class="rounded">
@@ -22,8 +22,7 @@
                     </div>
                 </div>
             </div>
-        </div>
-         <div class="container">
+
             <div class="row row-cols-sm-1 row-cols-md-3  g-3">
                 <div class="col-12">
                     <div class="items">

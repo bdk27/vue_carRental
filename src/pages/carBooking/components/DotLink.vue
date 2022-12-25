@@ -1,9 +1,9 @@
 <template>
     <div class="dot-links d-flex align-items-center justify-content-center flex-column position-fixed">
-        <a href="/carBooking.html">
+        <a href="/">
             <div class="reserve-btn">
                 <div class="circle">
-                    <font-awesome-icon icon="fa-solid fa-car" class="icon"/>
+                   <font-awesome-icon icon="fa-solid fa-house" class="icon"/>
                 </div>
             </div>
         </a>
@@ -18,7 +18,7 @@
 
 <script>
     import { onMounted } from 'vue';
-    import topBtn from '../assets/js/dotLink';
+    import topBtn from '../../../assets/js/dotLink';
 
     export default {
         name: 'dotLink',
