@@ -146,11 +146,17 @@
             </div>
         </div>
     </section>
+    <CarsModel></CarsModel>
 </template>
 
 <script>
+    import CarsModel from './CarsModel'
+
     export default {
         name: 'BookingForm',
+        components: {
+            CarsModel,
+        }
     }
 </script>
 
