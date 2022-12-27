@@ -8,9 +8,9 @@ import "bootstrap"
 //fontawesome
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faArrowUp, faHouse, faCar, faUsers, faGear, faGasPump } from '@fortawesome/free-solid-svg-icons'
+import { faArrowUp, faHouse, faCar, faUsers, faGear, faGasPump, faCarSide, faVanShuttle, faTruckPickup, faTruck } from '@fortawesome/free-solid-svg-icons'
 import { faFacebook, faLine, faInstagram } from '@fortawesome/free-brands-svg-icons'
-library.add( faFacebook, faLine, faInstagram, faArrowUp, faHouse, faCar, faUsers, faGear, faGasPump )
+library.add( faFacebook, faLine, faInstagram, faArrowUp, faHouse, faCar, faUsers, faGear, faGasPump, faCarSide, faVanShuttle, faTruckPickup, faTruck )
 
 
 createApp(carBooking)
