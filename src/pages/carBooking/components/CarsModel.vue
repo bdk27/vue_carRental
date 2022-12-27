@@ -92,14 +92,13 @@
             
             // 新增active className
             function isAct() {
-                let items = document.getElementsByClassName('items');
-                for(let i=0; i<items.length; i++) {
-                    items[i].addEventListener('click', function() {
-                        let current = document.getElementsByClassName('active');
-                        current[0].className = current[0].className.replace(' active', '');
-                        this.className += ' active';
+                let items = document.querySelectorAll('.items');
+                items.forEach(item => {
+                    item.addEventListener('click', function() {
+                        items.forEach(btn => btn.classList.remove('active'));
+                        this.classList.add('active');
                     });
-                }
+                });
             }
             onMounted(() => {
                 isAct()
@@ -132,6 +131,15 @@
         border-radius: 1rem;
         text-align: center;
         cursor: pointer;
+        &.active, &:hover {
+            background: $blue;
+            .icon {
+                color: #fff;
+            }
+            h5 {
+                color: #fff;
+            }
+        }
         .icon {
             color: $blue;
             font-size: 2.5rem;
@@ -141,15 +149,6 @@
             color: $blue;
             font-size: 1.6rem;
             margin: 0;
-        }
-    }
-    .active, .items:hover {
-        background: $blue;
-        .icon {
-            color: #fff;
-        }
-        h5 {
-            color: #fff;
         }
     }
     .card-title {
