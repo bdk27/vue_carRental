@@ -1,17 +1,17 @@
 <template>
-    <section v-if="reserve">
+    <section>
         <div class="mask">
             <div class="container">
-                <div class="closeBtn shadow" @click="reserve = false">
+                <div class="closeBtn shadow" @click="closeRsv">
                     <font-awesome-icon icon="fa-solid fa-xmark" class="icon"/>
                 </div>
                 <div class="row">
-                    <div class="col-12 col-md-4 bg-primary">
+                    <div class="col-12 col-md-4">
                         <div class="items p-3">
                             <div class="card p-5">
                                 <img src="../../../assets/img/sedan/bmw-offer.png" >
                                 <div class="card-body">
-                                    <h5 class="card-title">KAMAZ-truck 2.0</h5>
+                                    <h5 class="card-title">{{ sendData.name }}</h5>
                                     <div class="card-text">
                                         <p>類型: 轎車</p>
                                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus, repellat.</p>
@@ -26,7 +26,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-8 bg-success">
+                    <div class="col-12 col-md-8">
                         <div class="items p-3">
                             <form class="mb-5 p-5">
                                 <h5 class="text-center mb-5">會員註冊</h5>
@@ -64,20 +64,40 @@
                         </div>
                     </div>
                 </div>
+                <button @click="test">test</button>
             </div>
         </div>
     </section>
 </template>
 
 <script>
-    import { ref } from 'vue'
+    import { onMounted, reactive} from 'vue';
+    /* import { ref } from 'vue' */
     export default {
         name: 'ConfirmForm',
-        setup() {
-            let reserve = ref(true);
+        props: ['sendData'],   
+        setup(sendData, context) {
+            const qwe = reactive([]);
+           
+            function closeRsv() {
+                context.emit('hideRsv', false);
+            }
+            function test() {
+               /*  console.log(sendData.sendData[0])
+                getData.push(sendData.sendData[0]);
+                console.log(getData[0]); */
+                console.log(sendData.sendData[0].name)
+            }
+
+            onMounted(() => {
+               /*  qwe.push(JSON.parse(sendData)); */
+            })
 
             return {
-                reserve
+                closeRsv,
+                test,
+                /* getData */
+                qwe
             }
         }
     }
@@ -87,120 +107,123 @@
     $blue: #003060;
     $yellow: #ffc107;
 
-   /*  .mask {
-        position: absolute;
+    .mask {
+        position: fixed;
         top: 0;
         bottom: 0;
         left: 0;
         right: 0;
         background-color: rgba(0, 0, 0, .5);
-    } */
-
-    .container {
-        position: relative;
-        .closeBtn {
+        .container {
             position: absolute;
-            top: 0;
-            right: 0;
-            width: 50px;
-            height: 50px;
-            background: #fff;
-            padding: 1rem;
-            border-radius: 50%;
-            cursor: pointer;
-            &:hover {
-                background: $yellow;
-            }
-            .icon {
-                font-size: 2rem;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            .closeBtn {
                 position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                color: $blue;
+                top: 0;
+                right: 0;
+                width: 50px;
+                height: 50px;
+                background: #fff;
+                padding: 1rem;
+                border-radius: 50%;
+                cursor: pointer;
+                &:hover {
+                    background: $yellow;
+                }
+                .icon {
+                    font-size: 2rem;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    color: $blue;
+                }
             }
-        }
-        .card {
-            border-radius: 1rem;
-            .card-body {
-                .card-title {
+            .card {
+                border-radius: 1rem;
+                .card-body {
+                    .card-title {
+                        font-size: 2rem;
+                        color: $blue;
+                        font-weight: bold;
+                    }
+                    .card-text {
+                        font-size: 1.6rem;
+                    }
+                }
+                .list-group-item {
+                    font-size: 1.6rem;
+                    span {
+                        color: gray;
+                    }
+                }
+            }
+
+            form {
+                border-radius: 1rem;
+                background: #fff;
+                
+                h5 {
                     font-size: 2rem;
                     color: $blue;
                     font-weight: bold;
                 }
-                .card-text {
+                .form-label {
+                    font-size: 1.6rem;
+                    color: $blue;
+                    .icon {
+                        color: $blue;
+                        font-size: 1.6rem;
+                        margin-right: .5rem;
+                    }
+                    span {
+                        color: red;
+                    }
+                }
+                input {
+                    font-size: 1.8rem;
+                }
+            }
+
+            .checkout {
+                background: #fff;
+                border-radius: 1rem;
+                h5 {
+                    color: $blue;
+                    font-size: 2rem;
+                    font-weight: bold;
+                    text-align: center;
+                }
+                h3 {
+                    color: $blue;
+                    font-size: 2rem;
+                    span {
+                        color: red;
+                        font-weight: bold;
+                        font-size: 2.5rem;
+                    }
+                }
+                p {
                     font-size: 1.6rem;
                 }
-            }
-            .list-group-item {
-                font-size: 1.6rem;
-                span {
-                    color: gray;
-                }
-            }
-        }
-
-        form {
-            border-radius: 1rem;
-            background: #fff;
-            
-            h5 {
-                font-size: 2rem;
-                color: $blue;
-                font-weight: bold;
-            }
-            .form-label {
-                font-size: 1.6rem;
-                color: $blue;
-                .icon {
+                button {
+                    padding: 1rem 2rem;
                     color: $blue;
                     font-size: 1.6rem;
-                    margin-right: .5rem;
-                }
-                span {
-                    color: red;
-                }
-            }
-            input {
-                font-size: 1.8rem;
-            }
-        }
-
-        .checkout {
-            background: #fff;
-            border-radius: 1rem;
-            h5 {
-                color: $blue;
-                font-size: 2rem;
-                font-weight: bold;
-                text-align: center;
-            }
-            h3 {
-                color: $blue;
-                font-size: 2rem;
-                span {
-                    color: red;
-                    font-weight: bold;
-                    font-size: 2.5rem;
-                }
-            }
-            p {
-                font-size: 1.6rem;
-            }
-            button {
-                padding: 1rem 2rem;
-                color: $blue;
-                font-size: 1.6rem;
-                border: 1px solid $yellow;
-                background: $yellow;
-                border-radius: 1rem;
-                &:hover {
                     border: 1px solid $yellow;
-                    background: none;
-                    transition: .5s;
+                    background: $yellow;
+                    border-radius: 1rem;
+                    &:hover {
+                        border: 1px solid $yellow;
+                        background: none;
+                        transition: .5s;
+                    }
                 }
-            }
-        } 
+            } 
+        }
     }
+    
     
 </style>

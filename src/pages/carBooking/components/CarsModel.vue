@@ -52,7 +52,7 @@
                             </div>
                             <div class="card-bottom d-flex align-items-center justify-content-between">
                                 <h4>NT$ <span>{{ item.price }}</span>/日</h4>
-                                <button @click="reserve = true">我要預約</button>
+                                <button @click="showRsv(item)">我要預約</button>
                             </div>
                         </div>
                     </div>
@@ -60,8 +60,10 @@
             </div>
         </div>
     </section>
-    
-    <ConfirmForm v-if="reserve"></ConfirmForm>
+
+    <teleport to='body'>
+        <ConfirmForm @hideRsv="hideRsv" v-if="reserve" :sendData="sendData"></ConfirmForm>
+    </teleport>
 </template>
 
 <script>
@@ -77,6 +79,16 @@
         setup() {
             let visibility = ref('all');
             let reserve = ref(false);
+            let sendData = reactive([]);
+
+            // 開、關以及傳送資料給ConfirmForm頁面
+            function showRsv(item) {
+                reserve.value = true;
+                sendData.push(item);
+            }
+            function hideRsv(close) {
+                reserve.value = close;
+            }
 
             // 車款資料
             const allCars = reactive([
@@ -117,7 +129,10 @@
                 allCars,
                 filterCars,
                 isAct,
-                reserve
+                showRsv,
+                reserve,
+                hideRsv,
+                sendData
             }
         }   
     }
