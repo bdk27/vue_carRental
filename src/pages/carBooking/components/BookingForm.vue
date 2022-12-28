@@ -143,7 +143,6 @@
 
             <div class="text-center">
                 <button type="submit" @click="showVehicle">查看車款</button>
-                <button @click="test">test</button>
             </div>
         </div>
     </section>
@@ -164,7 +163,8 @@
             function showVehicle() {
                 isShow.value = !isShow.value;
             }
-
+            
+            // 預定資料
             const bookingInfo = reactive({
                 startLoc: '選擇租車地點',
                 endLoc: '選擇還車地點',
@@ -173,15 +173,11 @@
                 returnDate: '',
                 returnTime: '',
             });
-            function test() {
-                console.log(bookingInfo);
-            }
 
             return {
                 showVehicle,
                 isShow,
                 bookingInfo,
-                test
             }
         }
     }

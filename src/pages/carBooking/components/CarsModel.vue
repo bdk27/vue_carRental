@@ -1,6 +1,6 @@
 <template>
     <section>
-        <div class="container">
+        <div class="container p-0">
             <h3>車款介紹</h3>
             <div class="row row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-3 mb-4">
                  <div class="col-6">
@@ -52,7 +52,7 @@
                             </div>
                             <div class="card-bottom d-flex align-items-center justify-content-between">
                                 <h4>NT$ <span>{{ item.price }}</span>/日</h4>
-                                <a href="#">我要預約</a>
+                                <button @click="reserve = true">我要預約</button>
                             </div>
                         </div>
                     </div>
@@ -60,16 +60,24 @@
             </div>
         </div>
     </section>
+    
+    <ConfirmForm v-if="reserve"></ConfirmForm>
 </template>
 
 <script>
     import { computed, onMounted, reactive, ref } from 'vue'
     import { vehicle } from '../../../assets/js/vehicle'
+    import ConfirmForm from './ConfirmForm'
 
     export default {
         name: 'CarsModel',
+        components: {
+            ConfirmForm,
+        },
         setup() {
             let visibility = ref('all');
+            let reserve = ref(false);
+
             // 車款資料
             const allCars = reactive([
                 vehicle
@@ -109,6 +117,7 @@
                 allCars,
                 filterCars,
                 isAct,
+                reserve
             }
         }   
     }
@@ -168,12 +177,13 @@
             color: red;
             font-size: 2rem;
         }
-        a {
+        button {
             font-size: 1.6rem;
             color: $blue;
             background: $yellow;
             padding: 1rem;
             text-decoration: none;
+            border: none;
             border-radius: 5px;
             &:hover {
                 background-color:#FFD306;
