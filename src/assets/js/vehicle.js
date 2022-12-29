@@ -4,7 +4,7 @@ const vehicle = [
     {
         id: nanoid(),
         name: 'BMW-sedan 1.0',
-        type: 'sedan',
+        type: '轎車',
         cc: 2000,
         number: 5,
         gas: '95無鉛',
@@ -16,7 +16,7 @@ const vehicle = [
     {
         id: nanoid(),
         name: 'Benz-sedan 1.0',
-        type: 'sedan',
+        type: '轎車',
         cc: 1790,
         number: 5,
         gas: '95無鉛',
@@ -28,7 +28,7 @@ const vehicle = [
     {
         id: nanoid(),
         name: 'Nissan-sedan 1.0',
-        type: 'sedan',
+        type: '轎車',
         cc: 1700,
         number: 5,
         gas: '95無鉛',
@@ -40,7 +40,7 @@ const vehicle = [
     {
         id: nanoid(),
         name: 'Toyota-sedan 1.0',
-        type: 'sedan',
+        type: '轎車',
         cc: 1500,
         number: 5,
         gas: '95無鉛汽油',
@@ -52,7 +52,7 @@ const vehicle = [
     {
         id: nanoid(),
         name: 'Chevrolet-sedan 1.0',
-        type: 'sedan',
+        type: '轎車',
         cc: 1900,
         number: 5,
         gas: '95無鉛',
@@ -64,7 +64,7 @@ const vehicle = [
     {
         id: nanoid(),
         name: 'Toyota-sedan 2.0',
-        type: 'sedan',
+        type: '轎車',
         cc: 1600,
         number: 5,
         gas: '95無鉛',
@@ -76,7 +76,7 @@ const vehicle = [
     {
         id: nanoid(),
         name: 'Toyota-sedan 2.5',
-        type: 'sedan',
+        type: '轎車',
         cc: 1800,
         number: 5,
         gas: '95無鉛',
@@ -88,7 +88,7 @@ const vehicle = [
     {
         id: nanoid(),
         name: 'Honda-suv 1.0',
-        type: 'suv',
+        type: '休旅車',
         cc: 1798,
         number: 5,
         gas: '95無鉛',
@@ -100,7 +100,7 @@ const vehicle = [
     {
         id: nanoid(),
         name: 'Mazda-suv 1.0',
-        type: 'suv',
+        type: '休旅車',
         cc: 1494,
         number: 5,
         gas: '95無鉛',
@@ -112,7 +112,7 @@ const vehicle = [
     {
         id: nanoid(),
         name: 'Toyota-suv 1.0',
-        type: 'suv',
+        type: '休旅車',
         cc: 1500,
         number: 5,
         gas: '95無鉛',
@@ -124,7 +124,7 @@ const vehicle = [
     {
         id: nanoid(),
         name: 'Honda-suv 1.0',
-        type: 'suv',
+        type: '休旅車',
         cc: 1798,
         number: 7,
         gas: '95無鉛',
@@ -136,7 +136,7 @@ const vehicle = [
     {
         id: nanoid(),
         name: 'Toyota-suv 2.0',
-        type: 'suv',
+        type: '休旅車',
         cc: 1600,
         number: 5,
         gas: '95無鉛',
@@ -148,7 +148,7 @@ const vehicle = [
     {
         id: nanoid(),
         name: 'Toyota-pickup 1.0',
-        type: 'pickup',
+        type: '皮卡',
         cc: 1496,
         number: 4,
         gas: '95無鉛',
@@ -160,7 +160,7 @@ const vehicle = [
     {
         id: nanoid(),
         name: 'Ford-pickup 1.0',
-        type: 'pickup',
+        type: '皮卡',
         cc: 1200,
         number: 4,
         gas: '95無鉛',
@@ -172,7 +172,7 @@ const vehicle = [
     {
         id: nanoid(),
         name: 'Ford-pickup 2.0',
-        type: 'pickup',
+        type: '皮卡',
         cc: 1198,
         number: 4,
         gas: '95無鉛',
@@ -184,7 +184,7 @@ const vehicle = [
     {
         id: nanoid(),
         name: 'Chevrolet-pickup 1.0',
-        type: 'pickup',
+        type: '皮卡',
         cc: 2300,
         number: 4,
         gas: '95無鉛',
@@ -196,7 +196,7 @@ const vehicle = [
     {
         id: nanoid(),
         name: 'GMC-pickup 1.0',
-        type: 'pickup',
+        type: '皮卡',
         cc: 2200,
         number: 4,
         gas: '95無鉛',
@@ -208,7 +208,7 @@ const vehicle = [
     {
         id: nanoid(),
         name: 'Chevrolet-pickup 2.0',
-        type: 'pickup',
+        type: '皮卡',
         cc: 2100,
         number: 4,
         gas: '95無鉛',
@@ -220,7 +220,7 @@ const vehicle = [
     {
         id: nanoid(),
         name: 'Mitsubishi-truck 1.0',
-        type: 'truck',
+        type: '貨車',
         cc: 4000,
         number: 3,
         gas: '95無鉛',
@@ -232,7 +232,7 @@ const vehicle = [
     {
         id: nanoid(),
         name: 'DAF-truck 1.0',
-        type: 'truck',
+        type: '貨車',
         cc: 4200,
         number: 3,
         gas: '95無鉛',
@@ -244,7 +244,7 @@ const vehicle = [
     {
         id: nanoid(),
         name: 'MAN-truck 1.0',
-        type: 'truck',
+        type: '貨車',
         cc: 3850,
         number: 3,
         gas: '95無鉛',
@@ -256,7 +256,7 @@ const vehicle = [
     {
         id: nanoid(),
         name: 'KAMAZ-truck 2.0',
-        type: 'truck',
+        type: '貨車',
         cc: 3950,
         number: 3,
         gas: '95無鉛',

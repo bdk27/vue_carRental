@@ -5,16 +5,16 @@
                 <div class="closeBtn shadow" @click="closeRsv">
                     <font-awesome-icon icon="fa-solid fa-xmark" class="icon"/>
                 </div>
-                <div class="row">
+                <div class="row" v-for="item in getData[0]" :key="item.id">
                     <div class="col-12 col-md-4">
                         <div class="items p-3">
                             <div class="card p-5">
-                                <img src="../../../assets/img/sedan/bmw-offer.png" >
+                                <img :src="item.img" >
                                 <div class="card-body">
-                                    <h5 class="card-title">{{ sendData.name }}</h5>
+                                    <h5 class="card-title">{{ item.name }}</h5>
                                     <div class="card-text">
-                                        <p>類型: 轎車</p>
-                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus, repellat.</p>
+                                        <p>類型: {{ item.type }}</p>
+                                        <p>{{ item.content }}</p>
                                     </div>
                                 </div>
                                 <ul class="list-group list-group-flush">
@@ -51,7 +51,7 @@
                             </form>
                             <div class="checkout p-5">
                                 <h5>價錢$</h5>
-                                <h5>KAMAZ-truck 2.0 (3000/1日)</h5>
+                                <h5>{{ item.name }}({{ item.price }}/1日)</h5>
                                 <div class="d-flex align-items-center justify-content-between mb-3">
                                     <h5>總價 (5日)</h5>
                                     <h3>NT$ <span>15000</span></h3>
@@ -71,33 +71,33 @@
 </template>
 
 <script>
-    import { onMounted, reactive} from 'vue';
-    /* import { ref } from 'vue' */
+    import { onBeforeUnmount, onMounted, reactive } from 'vue';
     export default {
         name: 'ConfirmForm',
         props: ['sendData'],   
-        setup(sendData, context) {
-            const qwe = reactive([]);
+        setup(props, context) {
+            //取得sendData給getData
+            const getData = reactive([]);
            
+            //關閉Confirm頁面
             function closeRsv() {
                 context.emit('hideRsv', false);
             }
             function test() {
-               /*  console.log(sendData.sendData[0])
-                getData.push(sendData.sendData[0]);
-                console.log(getData[0]); */
-                console.log(sendData.sendData[0].name)
+                console.log(getData)
             }
 
             onMounted(() => {
-               /*  qwe.push(JSON.parse(sendData)); */
+                getData.push(props.sendData);
+            })
+            onBeforeUnmount(() => {
+                getData[0].pop();
             })
 
             return {
                 closeRsv,
                 test,
-                /* getData */
-                qwe
+                getData,
             }
         }
     }

@@ -98,13 +98,13 @@
             const filterCars = computed(() => {
                 switch(visibility.value) {
                     case 'sedan':
-                        return allCars[0].filter(item => item.type === 'sedan');
+                        return allCars[0].filter(item => item.type === '轎車');
                     case 'suv':
-                        return allCars[0].filter(item => item.type === 'suv');
+                        return allCars[0].filter(item => item.type === '休旅車');
                     case 'pickup': 
-                        return allCars[0].filter(item => item.type === 'pickup');
+                        return allCars[0].filter(item => item.type === '皮卡');
                     case 'truck':
-                        return allCars[0].filter(item => item.type === 'truck');
+                        return allCars[0].filter(item => item.type === '貨車');
                     default:
                         return allCars[0]
                 }
