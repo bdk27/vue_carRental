@@ -11,6 +11,9 @@ module.exports = defineConfig({
       template: './public/carBooking.html',
       title: 'car_booking',
     }
-  }
+  },
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/vue_carRental/'
+    : '/'
 })
 
