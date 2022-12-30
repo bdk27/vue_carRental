@@ -64,14 +64,14 @@
                         </div>
                     </div>
                 </div>
-                <button @click="test">test</button>
             </div>
         </div>
     </section>
 </template>
 
 <script>
-    import { onBeforeUnmount, onMounted, reactive } from 'vue';
+    import { onBeforeUnmount, onMounted, reactive } from 'vue'
+
     export default {
         name: 'ConfirmForm',
         props: ['sendData'],   
@@ -83,13 +83,14 @@
             function closeRsv() {
                 context.emit('hideRsv', false);
             }
+
             function test() {
-                console.log(getData)
             }
 
-            onMounted(() => {
+            onMounted(() => { 
                 getData.push(props.sendData);
             })
+
             onBeforeUnmount(() => {
                 getData[0].pop();
             })

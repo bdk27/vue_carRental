@@ -132,7 +132,7 @@
                 showRsv,
                 reserve,
                 hideRsv,
-                sendData
+                sendData,
             }
         }   
     }

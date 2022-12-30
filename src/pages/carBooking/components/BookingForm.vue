@@ -163,7 +163,7 @@
             function showVehicle() {
                 isShow.value = !isShow.value;
             }
-            
+
             // 預定資料
             const bookingInfo = reactive({
                 startLoc: '選擇租車地點',
