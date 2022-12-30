@@ -14,6 +14,6 @@ module.exports = defineConfig({
   },
   publicPath: process.env.NODE_ENV === 'production'
     ? '/vue_carRental/'
-    : '/vue_carRental/'
+    : '/'
 })
 
