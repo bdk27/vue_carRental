@@ -1,6 +1,6 @@
 <template>
     <div class="dot-links d-flex align-items-center justify-content-center flex-column position-fixed">
-        <a href="vue_carRental/carBooking.html">
+        <a href="/carBooking.html">
             <div class="reserve-btn">
                 <div class="circle">
                     <font-awesome-icon icon="fa-solid fa-car" class="icon"/>

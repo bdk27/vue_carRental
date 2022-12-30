@@ -4,7 +4,7 @@
         <h2 class="animate__animated animate__fadeInRight">多樣車種隨您選擇</h2>
         <div class="hero-btn d-flex align-items-center justify-content-center" id="hero-btn">
             <h3>即刻點選，獲得更多優惠</h3>
-            <a href="vue_carRental/carBooking.html" class="animate__animated animate__pulse animate__infinite">立即租車</a>
+            <a href="/carBooking.html" class="animate__animated animate__pulse animate__infinite">立即租車</a>
         </div>
     </div> 
 
